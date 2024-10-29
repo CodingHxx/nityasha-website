@@ -22,8 +22,8 @@ const Page: React.FC = () => {
   return (
     <main className='flex flex-col content-center w-full h-full z-50 text-white'>
       <title>Nityasha.com | Make Your Simle</title>
-      <div className='relative mt-32 w-full justify-center mx-[5em] items-center h-full text-center md:flex hidden'>
-        <div className='relative z-10 flex flex-col items-center'>
+      <div className='relative mt-32 w-full justify-center items-center h-full text-center md:flex hidden'>
+        <div className='relative z-10 flex flex-col items-center w-full'>
           <div className="z-10 flex items-center justify-center">
             <div
               className={cn(
