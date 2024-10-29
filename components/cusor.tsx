@@ -1,39 +1,45 @@
-// components/CustomCursor.js
+// components/CustomCursor.tsx
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 const CustomCursor = () => {
-  const cursorRef = useRef(null);
+  const cursorRef = useRef<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    const moveCursor = (e) => {
-      gsap.to(cursorRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.3, // Smooth transition duration
-        ease: "power3.out", // Easing function
-      });
+    const moveCursor = (e: MouseEvent) => { // Specify the type for the event
+      if (cursorRef.current) { // Check if cursorRef is not null
+        gsap.to(cursorRef.current, {
+          x: e.clientX,
+          y: e.clientY,
+          duration: 0.3, // Smooth transition duration
+          ease: "power3.out", // Easing function
+        });
+      }
     };
 
     const handleMouseEnter = () => {
       setIsHovered(true);
-      gsap.to(cursorRef.current, {
-        scale: 9,
-        filter: "blur(9px)",
-        duration: 0.3,
-        ease: "power3.out",
-      });
+      if (cursorRef.current) { // Check if cursorRef is not null
+        gsap.to(cursorRef.current, {
+          scale: 9,
+          filter: "blur(9px)",
+          duration: 0.3,
+          ease: "power3.out",
+        });
+      }
     };
 
     const handleMouseLeave = () => {
       setIsHovered(false);
-      gsap.to(cursorRef.current, {
-        scale: 1,
-        filter: "blur(0px)",
-        duration: 0.3,
-        ease: "power3.out",
-      });
+      if (cursorRef.current) { // Check if cursorRef is not null
+        gsap.to(cursorRef.current, {
+          scale: 1,
+          filter: "blur(0px)",
+          duration: 0.3,
+          ease: "power3.out",
+        });
+      }
     };
 
     // Attach event listeners to various text elements
