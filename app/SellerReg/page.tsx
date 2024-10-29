@@ -53,11 +53,11 @@ function Page() {
                     <div className='flex items-center justify-center flex-col mt-10'>
                         {/* Name Input */}
                         <div className='flex flex-col'>
-                            <label htmlFor="Name" className='mb-2 pl-1'>Name</label>
+                            <label htmlFor="Name" className='mb-2 pl-1'>Username</label>
                             <div className='flex items-center justify-center w-[20rem] border-2 rounded-lg h-10 px-2'>
                                 <input 
                                     className='bg-transparent w-full h-full outline-none' 
-                                    type="text" 
+                                    type="Username" 
                                     placeholder='Name' 
                                     value={name} 
                                     onChange={(e) => setName(e.target.value)} 
