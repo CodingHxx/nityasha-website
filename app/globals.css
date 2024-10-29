@@ -102,3 +102,26 @@ body {
 .hover\:animate-spin:hover .animatespin {
   animation: spin 1s linear infinite;
 }
+.hoveranime {
+  display: inline-block; /* Ensures that hover works on inline elements */
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+  filter: grayscale(100%); /* Current standard */
+}
+
+.hoveranime:hover {
+  filter: brightness(1.2);
+}
+/* styles/globals.css */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  mix-blend-mode: exclusion;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  z-index: 9999;
+}

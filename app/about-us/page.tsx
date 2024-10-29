@@ -1,7 +1,28 @@
-import React from 'react';
+"use client";
+import React, { useEffect } from 'react';
 import BlurFade from "@/components/ui/blur-fade";
+import { useRouter } from 'next/navigation';
 
 function Page() {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Check if the device is a mobile device
+    const userAgent = navigator.userAgent || navigator.vendor;
+    const isPhone = /android|iPhone|iPad|iPod/i.test(userAgent);
+
+    // Redirect if it's a mobile device
+    if (isPhone) {
+      router.push('/'); // Change '/mobile-redirect' to your desired route
+    }
+  }, [router]);
+  const handlePhoneClick = () => {
+    window.open('tel:+919302035251', '_blank');
+  };
+
+  const handleEmailClick = () => {
+    window.open('mailto:hello@nityasha.com', '_blank');
+  };
   return (
     <main className='w-full h-full flex justify-start mt-[13rem] flex-col'>
       <title>About Us | Nityasha</title>
@@ -116,8 +137,8 @@ function Page() {
         <h1 className='flex flex-col font-[Poppins] text-[8em] font-medium leading-[1em]'>OUR LEADERS*</h1>
         <div className='w-full bg-white h-[0.1rem]'></div>
         <div className='flex items-center justify-between w-full flex-col mt-20'>
-          <div className='flex items-center justify-between h-fit w-full gap-[40em]'>
-            <div className='mb-[10em] w-[100%]'>
+          <div className='flex items-center justify-center h-fit w-full gap-[40em]'>
+            <div className='mb-[10em] w-[33%] hoveranime'>
               <div className='leaderImage h-[50em] w-full'>
                 <img className='w-full h-full' src="https://insightword.in/website/WhatsApp%20Image%202024-10-28%20at%208.07.16%20PM.jpeg" alt="" />
               </div>
@@ -126,7 +147,7 @@ function Page() {
                 <p className='text-[1.5em] '>FOUNDER & CEO</p>
               </div>
             </div>
-            <div className='individualLeaders  translate-y-[20em] mb-[10em] w-full'>
+            {/* <div className='individualLeaders  translate-y-[20em] mb-[10em] w-full'>
               <div className='leaderImage h-[50em] w-full'>
                 <img className='w-full h-full' src="https://ik.imagekit.io/sheryians/About%20Us/harshBhaiya_gIiC2DRXHp.png?updatedAt=1710496328960" alt="" />
               </div>
@@ -134,7 +155,7 @@ function Page() {
                 <h3 className='text-[1.5em] '>Harsh Sharma</h3>
                 <p className='text-[1.5em] '>FOUNDER & CEO</p>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* <div className='flex items-center justify-start w-full'>
             <div className='individualLeaders mb-[10em] w-[35%]'>
@@ -157,29 +178,29 @@ function Page() {
         <div className='links gap-[20em] flex w-full'>
           <div className='left'>
             <div className='borderDiv w-fit mb-[6em] text-start items-start justify-start flex flex-col'>
-              <a href="#" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Instagram</a>
+              <a href="https://www.instagram.com/innityasha/" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Instagram</a>
               <div className='w-full bg-white h-[0.1rem]'></div>
             </div>
             <div className='borderDiv w-fit mb-[6em] text-start items-start justify-start flex flex-col'>
-              <a href="#" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Youtube</a>
+              <a href="https://www.youtube.com/@HeIpdesk" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Youtube</a>
               <div className='w-full bg-white h-[0.1rem]'></div>
             </div>
             <div className='borderDiv w-fit mb-[6em] text-start items-start justify-start flex flex-col'>
-              <a href="#" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Telegram</a>
+              <a href="https://t.me/Innityasha" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Telegram</a>
               <div className='w-full bg-white h-[0.1rem]'></div>
             </div>
           </div>
           <div className='right'>
             <div className='borderDiv w-fit mb-[6em] text-start items-start justify-start flex flex-col'>
-              <a href="#" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>LinkedIn</a>
+              <a href="https://www.linkedin.com/company/nityasha-com" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>LinkedIn</a>
               <div className='w-full bg-white h-[0.1rem]'></div>
             </div>
             <div className='borderDiv w-fit mb-[6em] text-start items-start justify-start flex flex-col'>
-              <a href="#" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Discord</a>
+              <a href="https://discord.gg/VkaC3aWtTr" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Discord</a>
               <div className='w-full bg-white h-[0.1rem]'></div>
             </div>
             <div className='borderDiv w-fit mb-[6em] text-start items-start justify-start flex flex-col'>
-              <a href="#" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Facebook</a>
+              <a href="https://www.facebook.com/nityashacom" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>Facebook</a>
               <div className='w-full bg-white h-[0.1rem]'></div>
             </div>
           </div>
@@ -207,11 +228,11 @@ function Page() {
           </div>
           <div className='right'>
             <div className='borderDiv w-fit mb-[6em] text-start items-start justify-start flex flex-col'>
-              <a href="#" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>+91 9302035251</a>
+              <span className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem] cursor-pointer' onClick={handlePhoneClick}>+91 9302035251</span>
               <div className='w-full bg-white h-[0.1rem]'></div>
             </div>
             <div className='borderDiv w-fit mb-[6em] text-start items-start justify-start flex flex-col'>
-              <a href="#" target="_blank" className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem]'>HELLO@NITYASHA.COM</a>
+              <span className='text-white capitalize text-[2em] pr-[3em] pb-[0.5rem] cursor-pointer' onClick={handleEmailClick}>HELLO@NITYASHA.COM</span>
               <div className='w-full bg-white h-[0.1rem]'></div>
             </div>
             <div className='borderDiv w-fit mb-[6em] text-start items-start justify-start flex flex-col'>

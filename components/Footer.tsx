@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 const Footer = () => {
   return (
     <footer className=' md:flex hidden w-full'>
@@ -7,18 +7,25 @@ const Footer = () => {
         <div className="gap-4 p-4 px-8 py-16 sm:pb-16 md:flex md:justify-between">
           <div className="mb-12 flex flex-col gap-4">
             <a href="/" className="flex items-center gap-2">
-              <img src="logo.svg" alt="logo" className="h-8 w-8" />
-              <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Nityasha</span>
+              <div className='flex items-center justify-center h-9 w-9 overflow-hisaasddden'>
+                <Image
+                  src="/logo.svg"
+                  alt="Nityasha"
+                  width={100}
+                  height={100}
+                  className='object-contain scale-150'
+                />
+              </div>
+              <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white border-l-2 border-white px-3">Nityasha</span>
             </a>
-            <p className="max-w-xs">UI Library for Design Engineers</p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10">
             <div>
               <h2 className="mb-6 text-sm font-medium uppercase tracking-tighter text-gray-900 dark:text-white">Community</h2>
               <ul className="grid gap-2">
-                <li><a href="/" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Discord</a></li>
-                <li><a href="/" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Twitter</a></li>
-                <li><a href="mailto:hello@chatcollect.com" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Email</a></li>
+                <li><a href="https://discord.gg/VkaC3aWtTr" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Discord</a></li>
+                <li><a href="https://x.com/innityasha" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Twitter</a></li>
+                <li><a href="mailto:hello@nityasha.com" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Email</a></li>
               </ul>
             </div>
             <div>

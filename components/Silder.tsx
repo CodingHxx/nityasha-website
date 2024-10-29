@@ -80,12 +80,12 @@ export function Silder() {
   return (
     <div className="relative w-full items-center justify-center flex flex-col mt-20">
     <h1 className='flex flex-col font-[Poppins] text-[8em] font-medium leading-[1em] mb-10'>People Review's</h1>
-      <Marquee pauseOnHover className="[--duration:20s]">
+      <Marquee className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
+      <Marquee reverse className="[--duration:20s]">
         {secondRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
         ))}

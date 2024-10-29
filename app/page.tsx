@@ -22,7 +22,7 @@ const Page: React.FC = () => {
   return (
     <main className='flex flex-col content-center w-full h-full z-50 text-white'>
       <title>Nityasha.com | Make Your Simle</title>
-      <div className='relative mt-32 w-full justify-center mx-[5em] items-center h-full px-6 text-center md:px-8 md:flex hidden'>
+      <div className='relative mt-32 w-full justify-center mx-[5em] items-center h-full text-center md:flex hidden'>
         <div className='relative z-10 flex flex-col items-center'>
           <div className="z-10 flex items-center justify-center">
             <div
@@ -125,18 +125,17 @@ const Page: React.FC = () => {
           </section >
         </div>
       </div>
-      <div className='items-center justify-center w-full flex-col'>
+      <div className='items-center justify-center w-full flex-col  md:flex hidden'>
         {/* <AppInfo1 />
       <AppInfo2 />     <AppInfo1 />
       <AppInfo2 />     <AppInfo1 />
       <AppInfo2 /> */}
+        <MarqueeDemo />
+        <div className='my-20'></div>
+        <BentoDemo />
+        <div className='my-20'></div>
+        <Textreveal />
       </div>
-      <MarqueeDemo />
-      <div className='my-20'></div>
-      <BentoDemo />
-      <div className='my-20'></div>
-      <Textreveal />
-      <div className='my-20'></div>
       <div className='flex items-center justify-center  w-full md:hidden flex-col h-screen'>
         <div className="z-10 flex items-center justify-center ">
           <div
@@ -150,20 +149,20 @@ const Page: React.FC = () => {
             </AnimatedShinyText>
           </div>
         </div>
-        <h1 className='bg-gradient-to-br flex flex-col dark:from-white from-black from-30% dark:to-white/40 to-black/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]'>
-          Svee UI is the new way <span>to build landing pages.</span>
+        <h1 className='bg-gradient-to-br flex flex-col dark:from-white from-black from-30% dark:to-white/40 to-black/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-center w-full items-center justify-center text-transparent text-balance sm:text-6xl md:text-7xl lg:text-8xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]'>
+          Live Consulting <span>With Real Answers.</span>
         </h1>
-        <p className='-translate-y-4 animate-fade-in text-balance text-lg tracking-tight text-gray-400 opacity-0 [--animation-delay:400ms] md:text-xl'>
-          Join us today and elevate your business strategy.
+        <p className='-translate-y-4 animate-fade-in text-balance text-lg tracking-tight text-gray-400 opacity-0 [--animation-delay:400ms] md:text-xl text-center w-full flex items-center justify-center'>
+          Live consulting offers real answers to your pressing questions.
         </p>
 
         <div className='flex gap-5 mt-5'>
-<a href='https://insightword.in/website/Nityasha.apk'>
-          <ConfettiButton
-            className="ring-offset-background focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 px-4 py-2 -translate-y-4 animate-fade-in gap-1 rounded-lg text-white opacity-0 ease-in-out [--animation-delay:600ms] dark:text-black"
-          >
-            Download App
-          </ConfettiButton>
+          <a href='https://insightword.in/website/Nityasha.apk'>
+            <ConfettiButton
+              className="ring-offset-background focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 px-4 py-2 -translate-y-4 animate-fade-in gap-1 rounded-lg text-white opacity-0 ease-in-out [--animation-delay:600ms] dark:text-black"
+            >
+              Download App
+            </ConfettiButton>
           </a>
           <Link href='/SellerReg'>
             <ConfettiButton
