@@ -47,10 +47,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
     return (
         <html lang="en">
-            <body ref={scrollRef} className={`font-[Gilroy] antialiased scrollbar-thin relative bg-black`}>
+            <head>
+                {/* Add Open Graph metadata for favicon */}
+                <meta property="og:title" content="Nityasha Make Your Smile" />
+                <meta property="og:description" content="Discover a world where smiles and success go hand-in-hand. At Nityasha, we specialize in consulting solutions designed to elevate your brand, boost your online presence, and create lasting connections with your audience. Our expert team brings innovative, customized strategies to help you shine in today’s competitive landscape. Whether you’re looking to expand your reach, improve your engagement, or create an impactful digital footprint, we’re here to make it happen—with a smile." />
+                <meta property="og:image" content="https://insightword.in/website/favicon.ico" />
+                <meta property="og:url" content="https://nityasha-theta.vercel.app/" />
+                <meta property="og:image" content="https://insightword.in/website/favicon.ico" />
+                <meta property="og:type" content="website" />
+
+                {/* Include the favicon link for general browsers */}
+                <link rel="icon" href="https://insightword.in/website/favicon.ico" sizes="any" />
+
+                {/* Optional: Include additional sizes for Apple and other devices */}
+                <link rel="apple-touch-icon" href="https://insightword.in/website/favicon.ico" />
+                <link rel="icon" type="image/png" sizes="32x32" href="https://insightword.in/website/favicon.ico" />
+                <link rel="icon" type="image/png" sizes="16x16" href="https://insightword.in/website/favicon.ico" />
+
+                {/* Include additional CSS links */}
                 <link rel="stylesheet" href="https://fonts-dsd1.vercel.app/globals.css" />
-                <link rel="icon" href="/favicon.ico" sizes="any" />
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" />
+            </head>
+            <body ref={scrollRef} className={`font-[Gilroy] antialiased scrollbar-thin relative bg-black`}>
                 <Cursor />
                 <ThemeProvider attribute="class" defaultTheme="dark">
                     <MagicCard className="w-full flex items-center h-full justify-center" gradientColor={"#262626"}>
