@@ -62,7 +62,7 @@ function Header() {
                     </div>
 
                     <div className='relative border-l-2 border-white px-2 h-full items-center justify-center flex overflow-hidden'>
-                    Nityasha
+                        Nityasha
                     </div>
                 </div>
             </Link>
@@ -124,6 +124,7 @@ function Header() {
                         </SheetContent>
                     </Sheet>
                 </div>
+                <title>Nityasha.com | Make Your Simle</title>
             </div>
         </header>
     );

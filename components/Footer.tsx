@@ -36,6 +36,14 @@ const Footer = () => {
                 <li><a href="/privacy" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Privacy</a></li>
               </ul>
             </div>
+            <div>
+              <h2 className="mb-6 text-sm font-medium uppercase tracking-tighter text-gray-900 dark:text-white">Help</h2>
+              <ul className="grid gap-2">
+                <li><a href="/faqs" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Faqs</a></li>
+                <li><a href="/refund-cancellation" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Refund and Cancellation</a></li>
+                <li><a href="/contact-us" className="cursor-pointer text-sm font-[450] text-gray-400 duration-200 hover:text-gray-200">Contact Us</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-2 rounded-md border-neutral-700/20 px-8 py-4 sm:flex sm:flex-row sm:items-center sm:justify-center">
